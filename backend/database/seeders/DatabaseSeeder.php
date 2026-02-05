@@ -90,6 +90,33 @@ class DatabaseSeeder extends Seeder
                 'download_url' => '/downloads/auto-posting.zip',
                 'is_public' => false,
             ],
+            [
+                'name' => 'Sound FX Library Pro',
+                'slug' => 'sound-fx-library',
+                'description' => 'Bibliothèque de 500+ effets sonores pour tes lives. Réactions, transitions, ambiances.',
+                'category' => 'Audio',
+                'icon' => '🔊',
+                'download_url' => '/downloads/sound-fx-library.zip',
+                'is_public' => true,
+            ],
+            [
+                'name' => 'Chat Overlay Animated',
+                'slug' => 'chat-overlay',
+                'description' => 'Overlay de chat animé pour OBS. Affiche les messages avec style et animations.',
+                'category' => 'OBS',
+                'icon' => '💬',
+                'download_url' => '/downloads/chat-overlay.zip',
+                'is_public' => true,
+            ],
+            [
+                'name' => 'Growth Tracker Dashboard',
+                'slug' => 'growth-tracker',
+                'description' => 'Dashboard complet pour tracker ta croissance. Followers, engagement, revenus.',
+                'category' => 'Analytics',
+                'icon' => '📈',
+                'download_url' => '/downloads/growth-tracker.html',
+                'is_public' => false,
+            ],
         ];
 
         foreach ($tools as $tool) {
@@ -157,6 +184,26 @@ class DatabaseSeeder extends Seeder
                 'duration_minutes' => 60,
                 'is_public' => false,
                 'order' => 6,
+            ],
+            [
+                'title' => 'Engagement & Community Building',
+                'slug' => 'engagement-community',
+                'description' => 'Construis une communauté fidèle et engagée. Stratégies d\'interaction et fidélisation.',
+                'level' => 'pro',
+                'category' => 'Community',
+                'duration_minutes' => 90,
+                'is_public' => true,
+                'order' => 7,
+            ],
+            [
+                'title' => 'Monétisation Avancée',
+                'slug' => 'advanced-monetization',
+                'description' => 'Maximise tes revenus TikTok Live. Gifts, battles, partenariats et sponsoring.',
+                'level' => 'elite',
+                'category' => 'Business',
+                'duration_minutes' => 120,
+                'is_public' => false,
+                'order' => 8,
             ],
         ];
 
