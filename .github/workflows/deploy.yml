@@ -1,0 +1,62 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches:
+      - master
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Deploy to VPS
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          port: 22
+          script: |
+            echo "🚀 Starting deployment..."
+            
+            # Navigate to project directory
+            cd /var/www/starline-creator
+            
+            # Pull latest changes
+            echo "📥 Pulling latest code from GitHub..."
+            git pull origin master
+            
+            # Backend deployment
+            echo "🔧 Deploying backend..."
+            cd backend
+            composer install --no-dev --optimize-autoloader
+            php artisan config:cache
+            php artisan route:cache
+            php artisan view:cache
+            
+            # Run migrations if needed
+            php artisan migrate --force
+            
+            # Frontend deployment
+            echo "🎨 Deploying frontend..."
+            cd ../frontend
+            npm install
+            npm run build
+            
+            # Restart services
+            echo "♻️ Restarting services..."
+            sudo systemctl restart starline-creator-backend
+            sudo systemctl restart starline-creator-frontend
+            
+            # Verify services
+            echo "✅ Checking service status..."
+            sudo systemctl is-active starline-creator-backend
+            sudo systemctl is-active starline-creator-frontend
+            
+            echo "🎉 Deployment completed successfully!"
