@@ -1,7 +1,7 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 interface Training {
   id: number;
@@ -146,6 +146,10 @@ export default function AppTrainingPage() {
                   <div className="w-full bg-[#1e293b] rounded-full h-2">
                     <div
                       className="bg-gradient-to-r from-[#0ea5e9] to-[#a855f7] h-2 rounded-full transition-all"
+                      role="progressbar"
+                      aria-valuenow={training.progress || 0}
+                      aria-valuemin={0}
+                      aria-valuemax={100}
                       style={{ width: `${training.progress || 0}%` }}
                     ></div>
                   </div>

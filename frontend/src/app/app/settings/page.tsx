@@ -1,7 +1,7 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 interface User {
   name: string;
@@ -135,7 +135,7 @@ export default function AppSettingsPage() {
                   <p className="text-sm text-[#94a3b8]">Recevoir les nouveautés et mises à jour</p>
                 </div>
                 <label className="relative inline-flex items-center cursor-pointer">
-                  <input type="checkbox" className="sr-only peer" defaultChecked />
+                  <input type="checkbox" className="sr-only peer" defaultChecked aria-label="Activer les notifications email" />
                   <div className="w-11 h-6 bg-[#2d3748] peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#0ea5e9]"></div>
                 </label>
               </div>
@@ -145,7 +145,7 @@ export default function AppSettingsPage() {
                   <p className="text-sm text-[#94a3b8]">Interface en mode sombre (recommandé)</p>
                 </div>
                 <label className="relative inline-flex items-center cursor-pointer">
-                  <input type="checkbox" className="sr-only peer" defaultChecked disabled />
+                  <input type="checkbox" className="sr-only peer" defaultChecked disabled aria-label="Mode sombre activé" />
                   <div className="w-11 h-6 bg-[#2d3748] peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#0ea5e9]"></div>
                 </label>
               </div>
