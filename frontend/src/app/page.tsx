@@ -47,7 +47,7 @@ export default function Home() {
               Apply via TikTok
             </a>
           </div>
-        </div>
+        </section>
 
         <div className="grid md:grid-cols-3 gap-8 mb-20">
           <div className="p-8 bg-[#0f172a] border border-[#1e293b] rounded-lg hover:border-[#0ea5e9] transition group">

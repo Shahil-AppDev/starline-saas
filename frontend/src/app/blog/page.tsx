@@ -1,5 +1,6 @@
 'use client';
 
+import SocialMediaRain from '@/components/SocialMediaRain';
 import { Clock, Filter, Search, Tag } from 'lucide-react';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
