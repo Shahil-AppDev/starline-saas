@@ -39,9 +39,9 @@ export default function SocialMediaRain() {
         x: Math.random() * canvas.width,
         y: -50,
         size: Math.random() * 40 + 30,
-        speed: Math.random() * 2 + 0.8,
+        speed: Math.random() * 3 + 2,
         rotation: Math.random() * 360,
-        rotationSpeed: (Math.random() - 0.5) * 3,
+        rotationSpeed: (Math.random() - 0.5) * 4,
         icon: socialIcons[Math.floor(Math.random() * socialIcons.length)],
         opacity: Math.random() * 0.4 + 0.3,
       };
