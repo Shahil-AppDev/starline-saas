@@ -1,5 +1,5 @@
+import { ArrowLeft, CheckCircle, Download } from 'lucide-react';
 import Link from 'next/link';
-import { Download, ArrowLeft, CheckCircle } from 'lucide-react';
 
 export default function OBSStudioPage() {
   return (
@@ -147,27 +147,27 @@ export default function OBSStudioPage() {
             <h2 className="text-2xl font-bold mb-4 text-[#0ea5e9]">🚀 Checklist avant de lancer ton live</h2>
             <ul className="space-y-2">
               <li className="flex items-center gap-2">
-                <input type="checkbox" className="w-5 h-5" />
+                <input type="checkbox" className="w-5 h-5" aria-label="Connexion internet stable" />
                 <span>Connexion internet stable (min 5 Mbps upload)</span>
               </li>
               <li className="flex items-center gap-2">
-                <input type="checkbox" className="w-5 h-5" />
+                <input type="checkbox" className="w-5 h-5" aria-label="Webcam et micro fonctionnent" />
                 <span>Webcam et micro fonctionnent</span>
               </li>
               <li className="flex items-center gap-2">
-                <input type="checkbox" className="w-5 h-5" />
+                <input type="checkbox" className="w-5 h-5" aria-label="Éclairage correct" />
                 <span>Éclairage correct (face à une fenêtre ou ring light)</span>
               </li>
               <li className="flex items-center gap-2">
-                <input type="checkbox" className="w-5 h-5" />
+                <input type="checkbox" className="w-5 h-5" aria-label="Clé de flux TikTok configurée" />
                 <span>Clé de flux TikTok configurée</span>
               </li>
               <li className="flex items-center gap-2">
-                <input type="checkbox" className="w-5 h-5" />
+                <input type="checkbox" className="w-5 h-5" aria-label="Scène et overlays prêts" />
                 <span>Scène et overlays prêts</span>
               </li>
               <li className="flex items-center gap-2">
-                <input type="checkbox" className="w-5 h-5" />
+                <input type="checkbox" className="w-5 h-5" aria-label="Test de 2-3 minutes avant le vrai live" />
                 <span>Test de 2-3 minutes avant le vrai live</span>
               </li>
             </ul>

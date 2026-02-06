@@ -109,11 +109,7 @@ export default function SocialMediaRain() {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 pointer-events-none"
-      style={{ 
-        opacity: 0.6,
-        zIndex: 1
-      }}
+      className="fixed inset-0 pointer-events-none opacity-60 z-[1]"
     />
   );
 }

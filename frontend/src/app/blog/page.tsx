@@ -95,7 +95,8 @@ export default function BlogPage() {
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="pl-12 pr-8 py-3 bg-[#0f172a] border border-[#1e293b] rounded-lg focus:border-[#0ea5e9] outline-none appearance-none cursor-pointer min-w-[200px]"
+              className="px-4 py-2 bg-[#0f172a] border border-[#1e293b] rounded-lg focus:border-[#0ea5e9] outline-none appearance-none cursor-pointer min-w-[200px]"
+              aria-label="Filtrer par catégorie"
             >
               <option value="">Toutes les catégories</option>
               {categories.map((cat) => (

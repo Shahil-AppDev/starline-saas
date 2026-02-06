@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 
 export default function JoinPage() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [formData, setFormData] = useState({
     tiktok_handle: '',
     email: '',
@@ -41,9 +42,54 @@ export default function JoinPage() {
     <div className="min-h-screen bg-[#0a0e1a] text-[#e2e8f0] relative overflow-hidden">
       <SocialMediaRain />
       <nav className="border-b border-[#1e293b] bg-[#0f172a]/80 backdrop-blur-sm relative z-10">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="text-2xl font-bold gradient-text">STARLINE</Link>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
+          <Link href="/" className="text-xl sm:text-2xl font-bold gradient-text">STARLINE</Link>
+          
+          {/* Desktop Menu */}
+          <div className="hidden md:flex gap-6 items-center">
+            <Link href="/tools" className="hover:text-[#0ea5e9] transition">Outils</Link>
+            <Link href="/training" className="hover:text-[#0ea5e9] transition">Formations</Link>
+            <Link href="/blog" className="hover:text-[#0ea5e9] transition">Nos conseils</Link>
+            <Link href="/pricing" className="hover:text-[#0ea5e9] transition">Tarifs</Link>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="md:hidden p-2 text-[#e2e8f0] hover:text-[#0ea5e9] transition"
+            aria-label="Menu"
+          >
+            {mobileMenuOpen ? (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
+          </button>
         </div>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden border-t border-[#1e293b] bg-[#0f172a] absolute top-full left-0 right-0 shadow-lg">
+            <div className="px-4 py-4 space-y-3">
+              <Link href="/tools" className="block py-2 hover:text-[#0ea5e9] transition" onClick={() => setMobileMenuOpen(false)}>
+                Outils
+              </Link>
+              <Link href="/training" className="block py-2 hover:text-[#0ea5e9] transition" onClick={() => setMobileMenuOpen(false)}>
+                Formations
+              </Link>
+              <Link href="/blog" className="block py-2 hover:text-[#0ea5e9] transition" onClick={() => setMobileMenuOpen(false)}>
+                📝 Nos conseils
+              </Link>
+              <Link href="/pricing" className="block py-2 hover:text-[#0ea5e9] transition" onClick={() => setMobileMenuOpen(false)}>
+                Tarifs
+              </Link>
+            </div>
+          </div>
+        )}
       </nav>
 
       <main className="max-w-2xl mx-auto px-4 sm:px-6 py-12 sm:py-20">
