@@ -37,8 +37,9 @@ export default function JoinPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0a0e1a] text-[#e2e8f0]">
-      <nav className="border-b border-[#1e293b] bg-[#0f172a]/80 backdrop-blur-sm">
+    <div className="min-h-screen bg-[#0a0e1a] text-[#e2e8f0] relative overflow-hidden">
+      <SocialMediaRain />
+      <nav className="border-b border-[#1e293b] bg-[#0f172a]/80 backdrop-blur-sm relative z-10">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <Link href="/" className="text-2xl font-bold gradient-text">STARLINE</Link>
         </div>

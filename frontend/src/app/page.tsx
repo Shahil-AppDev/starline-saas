@@ -1,10 +1,12 @@
+import SocialMediaRain from '@/components/SocialMediaRain';
 import Link from 'next/link';
 
 const TIKTOK_APPLY_URL = "https://inapp.tiktokv.com/falcon/live_backstage/page/agency_detail/index.html?source=video&agency_scout_source=video_leads&title=Apply%20to%20join&ttba_uid=6886916494790444037";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#0a0e1a] text-[#e2e8f0]">
+    <div className="min-h-screen bg-[#0a0e1a] text-[#e2e8f0] relative overflow-hidden">
+      <SocialMediaRain />
       <nav className="border-b border-[#1e293b] bg-[#0f172a]/80 backdrop-blur-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <Link href="/" className="text-2xl font-bold gradient-text">STARLINE</Link>

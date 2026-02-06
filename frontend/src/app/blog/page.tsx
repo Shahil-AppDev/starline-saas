@@ -1,8 +1,8 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { Clock, Filter, Search, Tag } from 'lucide-react';
 import Link from 'next/link';
-import { Search, Clock, Tag, Filter } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 interface Article {
   id: number;
@@ -55,8 +55,9 @@ export default function BlogPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0a0e1a] text-[#e2e8f0]">
-      <nav className="border-b border-[#1e293b] bg-[#0f172a]/80 backdrop-blur-sm sticky top-0 z-50">
+    <div className="min-h-screen bg-[#0a0e1a] text-[#e2e8f0] relative overflow-hidden">
+      <SocialMediaRain />
+      <nav className="border-b border-[#1e293b] bg-[#0f172a]/80 backdrop-blur-sm sticky top-0 z-50 relative">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <Link href="/" className="text-2xl font-bold gradient-text">STARLINE</Link>
           <div className="flex gap-6">
