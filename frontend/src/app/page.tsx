@@ -21,14 +21,16 @@ export default function Home() {
       </nav>
 
       <main className="max-w-7xl mx-auto px-6 py-20">
-        <div className="text-center space-y-8 mb-20">
-          <h2 className="text-6xl md:text-7xl font-bold leading-tight">
-            <span className="gradient-text">Creator Hub</span>
-          </h2>
-          <p className="text-xl md:text-2xl text-[#94a3b8] max-w-3xl mx-auto leading-relaxed">
-            Rejoins l&apos;élite des créateurs TikTok Live. Outils pro, formations exclusives, support 24/7.
+        <section className="max-w-7xl mx-auto px-6 py-20 text-center relative z-10">
+          <div className="inline-block px-6 py-2 bg-[#0ea5e9]/20 border border-[#0ea5e9] rounded-full text-sm font-bold mb-6">
+            🎉 100% GRATUIT POUR LES CRÉATEURS
+          </div>
+          <h1 className="text-6xl font-bold mb-6">
+            <span className="gradient-text">Starline Creator Hub</span>
+          </h1>
+          <p className="text-2xl text-[#94a3b8] mb-8 max-w-3xl mx-auto">
+            La plateforme tout-en-un pour les créateurs TikTok. Outils pro, formations exclusives et communauté active. Entièrement gratuit.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
             <Link 
               href="/join" 
