@@ -46,8 +46,8 @@ export default function JoinPage() {
         </div>
       </nav>
 
-      <main className="max-w-2xl mx-auto px-6 py-20">
-        <h1 className="text-4xl font-bold gradient-text mb-4">Rejoins Starline</h1>
+      <main className="max-w-2xl mx-auto px-4 sm:px-6 py-12 sm:py-20">
+        <h1 className="text-3xl sm:text-4xl font-bold gradient-text mb-4">Rejoins Starline</h1>
         <p className="text-[#94a3b8] mb-8">Remplis ce formulaire et notre équipe te contactera sous 48h.</p>
 
         {status === 'success' && (
@@ -62,7 +62,7 @@ export default function JoinPage() {
           </div>
         )}
 
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
           <div>
             <label className="block mb-2 text-sm font-medium">TikTok Handle *</label>
             <input

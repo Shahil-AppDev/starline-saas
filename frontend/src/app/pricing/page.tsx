@@ -16,9 +16,9 @@ export default function PricingPage() {
         </div>
       </nav>
 
-      <main className="max-w-7xl mx-auto px-6 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold gradient-text mb-4">100% Gratuit pour les Créateurs</h1>
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+        <div className="text-center mb-12 sm:mb-16">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold gradient-text mb-4">100% Gratuit pour les Créateurs</h1>
           <p className="text-xl text-[#94a3b8] max-w-2xl mx-auto">
             Starline Creator Hub est entièrement gratuit pour tous les créateurs TikTok. Nos services sont financés par nos partenaires agences.
           </p>
@@ -26,15 +26,15 @@ export default function PricingPage() {
 
         <section className="mb-20">
           <div className="max-w-4xl mx-auto">
-            <div className="p-8 bg-gradient-to-r from-[#0f172a] to-[#1e293b] border-2 border-[#0ea5e9] rounded-lg text-center mb-12">
+            <div className="p-6 sm:p-8 bg-gradient-to-r from-[#0f172a] to-[#1e293b] border-2 border-[#0ea5e9] rounded-lg text-center mb-8 sm:mb-12">
               <div className="inline-block px-6 py-2 bg-[#0ea5e9] rounded-full text-sm font-bold mb-6">
                 POUR LES CRÉATEURS
               </div>
-              <h3 className="text-4xl font-bold mb-4">Accès Complet Gratuit</h3>
-              <div className="text-6xl font-bold gradient-text mb-6">0€</div>
+              <h3 className="text-3xl sm:text-4xl font-bold mb-4">Accès Complet Gratuit</h3>
+              <div className="text-5xl sm:text-6xl font-bold gradient-text mb-6">0€</div>
               <p className="text-xl text-[#94a3b8] mb-8">À vie, sans carte bancaire, sans engagement</p>
               
-              <div className="grid md:grid-cols-2 gap-6 text-left mb-8">
+              <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 text-left mb-6 sm:mb-8">
                 <div>
                   <h4 className="font-bold text-[#0ea5e9] mb-3">🎯 Outils Professionnels</h4>
                   <ul className="space-y-2 text-[#94a3b8]">

@@ -8,27 +8,28 @@ export default function Home() {
     <div className="min-h-screen bg-[#0a0e1a] text-[#e2e8f0] relative overflow-hidden">
       <SocialMediaRain />
       <nav className="border-b border-[#1e293b] bg-[#0f172a]/80 backdrop-blur-sm sticky top-0 z-50 relative">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="text-2xl font-bold gradient-text">STARLINE</Link>
-          <div className="flex gap-6 items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
+          <Link href="/" className="text-xl sm:text-2xl font-bold gradient-text">STARLINE</Link>
+          <div className="hidden md:flex gap-6 items-center">
             <Link href="/tools" className="hover:text-[#0ea5e9] transition">Outils</Link>
             <Link href="/training" className="hover:text-[#0ea5e9] transition">Formations</Link>
             <Link href="/pricing" className="hover:text-[#0ea5e9] transition">Tarifs</Link>
             <Link href="/about" className="hover:text-[#0ea5e9] transition">À propos</Link>
             <Link href="/join" className="px-4 py-2 bg-gradient-to-r from-[#0ea5e9] to-[#a855f7] rounded-lg font-semibold hover:opacity-90 transition">Rejoindre</Link>
           </div>
+          <Link href="/join" className="md:hidden px-4 py-2 bg-gradient-to-r from-[#0ea5e9] to-[#a855f7] rounded-lg font-semibold text-sm">Rejoindre</Link>
         </div>
       </nav>
 
-      <main className="max-w-7xl mx-auto px-6 py-20 relative z-10">
-        <section className="max-w-7xl mx-auto px-6 py-20 text-center relative z-10">
-          <div className="inline-block px-6 py-2 bg-[#0ea5e9]/20 border border-[#0ea5e9] rounded-full text-sm font-bold mb-6">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-20 relative z-10">
+        <section className="text-center mb-12 sm:mb-20">
+          <div className="inline-block px-4 sm:px-6 py-2 bg-[#0ea5e9]/20 border border-[#0ea5e9] rounded-full text-xs sm:text-sm font-bold mb-4 sm:mb-6">
             🎉 100% GRATUIT POUR LES CRÉATEURS
           </div>
-          <h1 className="text-6xl font-bold mb-6">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 sm:mb-6 px-4">
             <span className="gradient-text">Starline Creator Hub</span>
           </h1>
-          <p className="text-2xl text-[#94a3b8] mb-8 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl md:text-2xl text-[#94a3b8] mb-6 sm:mb-8 max-w-3xl mx-auto px-4">
             La plateforme tout-en-un pour les créateurs TikTok. Outils pro, formations exclusives et communauté active. Entièrement gratuit.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
@@ -49,8 +50,8 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-20">
-          <div className="p-8 bg-[#0f172a] border border-[#1e293b] rounded-lg hover:border-[#0ea5e9] transition group">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-12 sm:mb-20">
+          <div className="p-6 sm:p-8 bg-[#0f172a] border border-[#1e293b] rounded-lg hover:border-[#0ea5e9] transition group">
             <div className="text-4xl mb-4">🎬</div>
             <h3 className="text-2xl font-bold mb-3 text-[#0ea5e9] group-hover:text-[#0ea5e9]">Outils Pro</h3>
             <p className="text-[#94a3b8] leading-relaxed">Pack OBS, TikFinity presets, Streamer.bot actions, overlays animés et plus encore.</p>
@@ -165,9 +166,9 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="p-12 bg-gradient-to-r from-[#0f172a] to-[#1e293b] border border-[#1e293b] rounded-lg text-center">
-          <h2 className="text-4xl font-bold mb-4">Prêt à démarrer ?</h2>
-          <p className="text-xl text-[#94a3b8] mb-8 max-w-2xl mx-auto">
+        <div className="p-6 sm:p-8 md:p-12 bg-gradient-to-r from-[#0f172a] to-[#1e293b] border border-[#1e293b] rounded-lg text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">Prêt à démarrer ?</h2>
+          <p className="text-lg sm:text-xl text-[#94a3b8] mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
             Rejoins Starline Creator Hub maintenant et accède immédiatement aux outils et formations gratuites.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
