@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#0a0e1a] text-[#e2e8f0] relative overflow-hidden">
       <SocialMediaRain />
-      <nav className="border-b border-[#1e293b] bg-[#0f172a]/80 backdrop-blur-sm sticky top-0 z-50">
+      <nav className="border-b border-[#1e293b] bg-[#0f172a]/80 backdrop-blur-sm sticky top-0 z-50 relative">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <Link href="/" className="text-2xl font-bold gradient-text">STARLINE</Link>
           <div className="flex gap-6 items-center">
@@ -20,7 +20,7 @@ export default function Home() {
         </div>
       </nav>
 
-      <main className="max-w-7xl mx-auto px-6 py-20">
+      <main className="max-w-7xl mx-auto px-6 py-20 relative z-10">
         <section className="max-w-7xl mx-auto px-6 py-20 text-center relative z-10">
           <div className="inline-block px-6 py-2 bg-[#0ea5e9]/20 border border-[#0ea5e9] rounded-full text-sm font-bold mb-6">
             🎉 100% GRATUIT POUR LES CRÉATEURS

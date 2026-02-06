@@ -38,12 +38,12 @@ export default function SocialMediaRain() {
       return {
         x: Math.random() * canvas.width,
         y: -50,
-        size: Math.random() * 30 + 20,
-        speed: Math.random() * 2 + 0.5,
+        size: Math.random() * 40 + 30,
+        speed: Math.random() * 2 + 0.8,
         rotation: Math.random() * 360,
-        rotationSpeed: (Math.random() - 0.5) * 2,
+        rotationSpeed: (Math.random() - 0.5) * 3,
         icon: socialIcons[Math.floor(Math.random() * socialIcons.length)],
-        opacity: Math.random() * 0.3 + 0.1,
+        opacity: Math.random() * 0.4 + 0.3,
       };
     };
 
@@ -109,8 +109,11 @@ export default function SocialMediaRain() {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 pointer-events-none z-0"
-      style={{ opacity: 0.4 }}
+      className="fixed inset-0 pointer-events-none"
+      style={{ 
+        opacity: 0.6,
+        zIndex: 1
+      }}
     />
   );
 }
