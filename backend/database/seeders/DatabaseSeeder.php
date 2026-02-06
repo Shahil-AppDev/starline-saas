@@ -9,6 +9,7 @@ use App\Models\ToolsCatalog;
 use App\Models\TrainingsCatalog;
 use App\Models\CreatorsShowcase;
 use Illuminate\Support\Facades\Hash;
+use Database\Seeders\ArticleSeeder;
 
 class DatabaseSeeder extends Seeder
 {

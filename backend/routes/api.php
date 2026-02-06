@@ -4,13 +4,31 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\PublicController;
 use App\Http\Controllers\Api\AppController;
+use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\LeadController;
+use App\Http\Controllers\ToolController;
+use App\Http\Controllers\TrainingController;
+use App\Http\Controllers\CreatorController;
 
 // Public routes
-Route::get('/health', [PublicController::class, 'health']);
-Route::post('/public/join-lead', [PublicController::class, 'submitJoinLead']);
-Route::get('/public/tools', [PublicController::class, 'getTools']);
-Route::get('/public/trainings', [PublicController::class, 'getTrainings']);
-Route::get('/public/creators', [PublicController::class, 'getCreators']);
+Route::get('/health', function () {
+    return response()->json(['status' => 'ok']);
+});
+
+Route::post('/public/join-lead', [LeadController::class, 'store']);
+Route::get('/public/tools', [ToolController::class, 'index']);
+Route::get('/public/trainings', [TrainingController::class, 'index']);
+Route::get('/public/creators', [CreatorController::class, 'index']);
+
+// Blog routes
+Route::prefix('public/blog')->group(function () {
+    Route::get('/articles', [ArticleController::class, 'index']);
+    Route::get('/articles/latest', [ArticleController::class, 'latest']);
+    Route::get('/articles/{slug}', [ArticleController::class, 'show']);
+    Route::get('/articles/{slug}/related', [ArticleController::class, 'related']);
+    Route::get('/categories', [ArticleController::class, 'categories']);
+    Route::get('/tags', [ArticleController::class, 'tags']);
+});
 
 // Auth routes
 Route::post('/auth/register', [AuthController::class, 'register']);
