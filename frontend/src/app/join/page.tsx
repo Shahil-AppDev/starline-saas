@@ -1,7 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import SocialMediaRain from '@/components/SocialMediaRain';
 import Link from 'next/link';
+import { useState } from 'react';
 
 export default function JoinPage() {
   const [formData, setFormData] = useState({
