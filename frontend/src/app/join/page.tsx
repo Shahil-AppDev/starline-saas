@@ -150,6 +150,7 @@ export default function JoinPage() {
               value={formData.niche}
               onChange={(e) => setFormData({ ...formData, niche: e.target.value })}
               className="w-full px-4 py-3 bg-[#0f172a] border border-[#1e293b] rounded-lg focus:border-[#0ea5e9] outline-none"
+              aria-label="Sélectionner ta niche"
             >
               <option value="">Sélectionne ta niche</option>
               <option value="Gaming">Gaming</option>
