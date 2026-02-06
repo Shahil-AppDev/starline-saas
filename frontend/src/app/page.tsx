@@ -1,24 +1,77 @@
+'use client';
+
 import SocialMediaRain from '@/components/SocialMediaRain';
 import Link from 'next/link';
+import { useState } from 'react';
 
 const TIKTOK_APPLY_URL = "https://inapp.tiktokv.com/falcon/live_backstage/page/agency_detail/index.html?source=video&agency_scout_source=video_leads&title=Apply%20to%20join&ttba_uid=6886916494790444037";
 
 export default function Home() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
     <div className="min-h-screen bg-[#0a0e1a] text-[#e2e8f0] relative overflow-hidden">
       <SocialMediaRain />
       <nav className="border-b border-[#1e293b] bg-[#0f172a]/80 backdrop-blur-sm sticky top-0 z-50 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
           <Link href="/" className="text-xl sm:text-2xl font-bold gradient-text">STARLINE</Link>
+          
+          {/* Desktop Menu */}
           <div className="hidden md:flex gap-6 items-center">
             <Link href="/tools" className="hover:text-[#0ea5e9] transition">Outils</Link>
             <Link href="/training" className="hover:text-[#0ea5e9] transition">Formations</Link>
+            <Link href="/blog" className="hover:text-[#0ea5e9] transition">Nos conseils</Link>
             <Link href="/pricing" className="hover:text-[#0ea5e9] transition">Tarifs</Link>
             <Link href="/about" className="hover:text-[#0ea5e9] transition">À propos</Link>
             <Link href="/join" className="px-4 py-2 bg-gradient-to-r from-[#0ea5e9] to-[#a855f7] rounded-lg font-semibold hover:opacity-90 transition">Rejoindre</Link>
           </div>
-          <Link href="/join" className="md:hidden px-4 py-2 bg-gradient-to-r from-[#0ea5e9] to-[#a855f7] rounded-lg font-semibold text-sm">Rejoindre</Link>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="md:hidden p-2 text-[#e2e8f0] hover:text-[#0ea5e9] transition"
+            aria-label="Menu"
+          >
+            {mobileMenuOpen ? (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
+          </button>
         </div>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden border-t border-[#1e293b] bg-[#0f172a] absolute top-full left-0 right-0 shadow-lg">
+            <div className="px-4 py-4 space-y-3">
+              <Link href="/tools" className="block py-2 hover:text-[#0ea5e9] transition" onClick={() => setMobileMenuOpen(false)}>
+                Outils
+              </Link>
+              <Link href="/training" className="block py-2 hover:text-[#0ea5e9] transition" onClick={() => setMobileMenuOpen(false)}>
+                Formations
+              </Link>
+              <Link href="/blog" className="block py-2 hover:text-[#0ea5e9] transition" onClick={() => setMobileMenuOpen(false)}>
+                📝 Nos conseils
+              </Link>
+              <Link href="/pricing" className="block py-2 hover:text-[#0ea5e9] transition" onClick={() => setMobileMenuOpen(false)}>
+                Tarifs
+              </Link>
+              <Link href="/about" className="block py-2 hover:text-[#0ea5e9] transition" onClick={() => setMobileMenuOpen(false)}>
+                À propos
+              </Link>
+              <Link
+                href="/join"
+                className="block w-full mt-4 px-4 py-3 bg-gradient-to-r from-[#0ea5e9] to-[#a855f7] rounded-lg font-semibold text-center hover:opacity-90 transition"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Rejoindre Starline
+              </Link>
+            </div>
+          </div>
+        )}
       </nav>
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-20 relative z-10">
